@@ -1,9 +1,9 @@
 class Subjects {
   Subjects({
-      int? credits, 
-      int? id, 
-      String? name, 
-      String? teacher,}){
+      int credits, 
+      int id, 
+      String name, 
+      String teacher,}){
     _credits = credits;
     _id = id;
     _name = name;
@@ -16,15 +16,15 @@ class Subjects {
     _name = json['name'];
     _teacher = json['teacher'];
   }
-  int? _credits;
-  int? _id;
-  String? _name;
-  String? _teacher;
+  int _credits;
+  int _id;
+  String _name;
+  String _teacher;
 
-  int? get credits => _credits;
-  int? get id => _id;
-  String? get name => _name;
-  String? get teacher => _teacher;
+  int get credits => _credits;
+  int get id => _id;
+  String get name => _name;
+  String get teacher => _teacher;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};

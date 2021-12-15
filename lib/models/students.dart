@@ -1,9 +1,9 @@
 class Students {
   Students({
-      int? age, 
-      String? email, 
-      int? id, 
-      String? name,}){
+      int age, 
+      String email, 
+      int id, 
+      String name,}){
     _age = age;
     _email = email;
     _id = id;
@@ -16,15 +16,15 @@ class Students {
     _id = json['id'];
     _name = json['name'];
   }
-  int? _age;
-  String? _email;
-  int? _id;
-  String? _name;
+  int _age;
+  String _email;
+  int _id;
+  String _name;
 
-  int? get age => _age;
-  String? get email => _email;
-  int? get id => _id;
-  String? get name => _name;
+  int get age => _age;
+  String get email => _email;
+  int get id => _id;
+  String get name => _name;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
