@@ -22,3 +22,23 @@ const kSub = TextStyle(
   color: kGrey,
   fontSize: 14,
 );
+
+const kNameInner = TextStyle(
+  fontFamily: 'Quicksand',
+  fontWeight: FontWeight.w600,
+  color: kWhiteColor,
+  fontSize: 18,
+);
+
+const kNameInner1 = TextStyle(
+  fontFamily: 'Quicksand',
+  fontWeight: FontWeight.w600,
+  color: kWhiteColor,
+  fontSize: 16,
+);
+const kNameInnerButtons = TextStyle(
+  fontFamily: 'Quicksand',
+  fontWeight: FontWeight.w600,
+  color: kWhiteColor,
+  fontSize: 14,
+);

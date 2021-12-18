@@ -1,13 +1,11 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:hamon_task/constants/app_constants.dart';
 import 'package:hamon_task/constants/color_constants.dart';
 import 'package:hamon_task/constants/styleconstants.dart';
 import 'package:hamon_task/models/subjects.dart';
 import 'package:hamon_task/provider/subjectProvider.dart';
 import 'package:provider/provider.dart';
-import 'package:http/http.dart' as http;
 
 class SubjectList extends StatefulWidget {
   const SubjectList({Key key}) : super(key: key);

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hamon_task/provider/classroomprovider.dart';
+import 'package:hamon_task/provider/registerProvider.dart';
 import 'package:hamon_task/provider/studentsProvider.dart';
 import 'package:hamon_task/provider/subjectProvider.dart';
 import 'package:hamon_task/screens/home_page.dart';
@@ -24,6 +25,8 @@ class MyApp extends StatelessWidget {
             create: (context) => SubjectProvider()),
         ChangeNotifierProvider<ClassRoomProvider>(
             create: (context) => ClassRoomProvider()),
+        ChangeNotifierProvider<RegisteredProvider>(
+            create: (context) => RegisteredProvider()),
        ],
       child: MaterialApp(
         title: 'Flutter Demo',

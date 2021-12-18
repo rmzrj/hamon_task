@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hamon_task/constants/color_constants.dart';
 import 'package:hamon_task/constants/styleconstants.dart';
-import 'package:hamon_task/screens/classroomlist.dart';
+import 'package:hamon_task/screens/classrooms/classroom_select.dart';
+import 'package:hamon_task/screens/registerstudents/registerpage.dart';
 import 'package:hamon_task/screens/studentslist.dart';
 import 'package:hamon_task/screens/subjectslist.dart';
 class HomePage extends StatelessWidget {
@@ -68,7 +69,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               GestureDetector(
-                onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>ClassRoomlist())),
+                onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>ClassSelect())),
                 child: Card(
                   color: Color(0xfff8af60),
                   shape: RoundedRectangleBorder(
@@ -88,7 +89,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               GestureDetector(
-                onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>StudentsList())),
+                onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>RegisterPage())),
                 child: Card(
                   color: Color(0xff7471ca),
                   shape: RoundedRectangleBorder(
