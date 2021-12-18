@@ -3,6 +3,8 @@ import 'package:hamon_task/constants/color_constants.dart';
 import 'package:hamon_task/constants/styleconstants.dart';
 import 'package:hamon_task/models/registermodel.dart';
 import 'package:hamon_task/provider/registerProvider.dart';
+import 'package:hamon_task/screens/classrooms/addStudentClass.dart';
+import 'package:hamon_task/screens/classrooms/stdntdetails.dart';
 import 'package:hamon_task/screens/registerstudents/regdetails.dart';
 import 'package:provider/provider.dart';
 class StudentsinClass extends StatefulWidget {
@@ -36,6 +38,13 @@ class _StudentsinClassState extends State<StudentsinClass> {
         centerTitle: true,
         title: Text(widget.classroom.name),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        backgroundColor: kSecondryColor,
+        onPressed: (){
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> AddStudentsClass(subject:widget.subject,classroom:widget.classroom)));
+        },
+      ),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: FutureBuilder(
@@ -52,7 +61,7 @@ class _StudentsinClassState extends State<StudentsinClass> {
                     return regmodel.data.registrations[index].subject == widget.subject["id"] ?
                     GestureDetector(
                       onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>RegDetails(id:regmodel.data.registrations[index] ,)));
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>StdDetails(id:regmodel.data.registrations[index],)));
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),

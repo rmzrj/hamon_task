@@ -7,6 +7,7 @@ import 'package:hamon_task/constants/styleconstants.dart';
 import 'package:hamon_task/models/subjects.dart';
 import 'package:hamon_task/provider/subjectProvider.dart';
 import 'package:hamon_task/screens/classrooms/updatedclassroom.dart';
+import 'package:hamon_task/snackBar.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
 
@@ -73,6 +74,7 @@ class _SelectSubState extends State<SelectSub> {
     Map<String, dynamic> data = jsonDecode(response.body);
     print(data.toString());
     if(response.statusCode == 200){
+      showSnackBar(message: "Subject Updated", context: context);
       subdetails = data;
       Navigator.pushReplacement(
           context,

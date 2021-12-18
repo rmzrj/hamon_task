@@ -22,24 +22,11 @@ class UpdateClass extends StatefulWidget {
 }
 
 class _UpdateClassState extends State<UpdateClass> {
+  bool loading = false;
   SubjectProvider _subjectProvider;
   Future<List<Subjects>> subjts;
 
-  Future updateCurrentSubject(val) async {
-    String url = baseUrl +
-        "/classrooms/" +
-        "${widget.classroom.id}" +
-        "?api_key=" +
-        apikey;
-    await http.patch(Uri.parse(url), body: {
-      "subject": val,
-    }, headers: {
-      "Content-Type": "application/x-www-form-urlencoded"
-    }).then((value) {
-      print(value.body);
-      Navigator.of(context);
-    });
-  }
+
 
   Future fetchSubject() async {
     var subjectid;
@@ -161,7 +148,7 @@ class _UpdateClassState extends State<UpdateClass> {
                                   SizedBox(height: 22,),
                                   ElevatedButton(
                                     onPressed: () {
-                                      Navigator.push(
+                                      Navigator.pushReplacement(
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) => StudentsinClass(
@@ -190,25 +177,7 @@ class _UpdateClassState extends State<UpdateClass> {
 
                                     ),
                                   ),
-                                  // RaisedButton(
-                                  //   onPressed: () {
-                                  //
-                                  //   },
-                                  //   child: Text("View Students",),
-                                  //   color: kPrimaryColor,
-                                  //   shape: ,
-                                  // ),
-                                  // RaisedButton(
-                                  //   onPressed: () {
-                                  //     Navigator.push(
-                                  //         context,
-                                  //         MaterialPageRoute(
-                                  //             builder: (context) => SelectSub(
-                                  //                   classroom: widget.classroom,
-                                  //                 )));
-                                  //   },
-                                  //   child: Text("CHANGE SUBJECT"),
-                                  // ),
+
                                 ],
                               );
                             }
